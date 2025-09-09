@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Focus Studio Photography</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                 <img src="logo.png" class="logo1">
+            <h1 class="header__title">Bright Focus Studio  Photography</h1>
+
+            </div>
+           
+            <nav class="nav">
+                <button data-filter="all" class="nav__button nav__button--active">All</button>
+                <button data-filter="portrait" class="nav__button">Portrait</button>
+                <button data-filter="landscape" class="nav__button">Landscape</button>
+                <button data-filter="events" class="nav__button">Events</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="gallery-section">
+            <div class="container">
+                <div id="gallery" class="gallery">
+                    <!-- Images will be injected here by script.js -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="contact__title">Book a Shoot</h2>
+
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact__form">
+                    <input type="hidden" name="access_key" value="e20925dd-77e9-4630-aaf6-7c8bf4a9c690">
+                    <input type="hidden" name="subject" value="New Booking Request - Bright Focus Studio">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                    <div class="form-group">
+                        <label class="form-label">
+                            Name
+                            <input type="text" name="name" class="form-control" required>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            Email
+                            <input type="email" name="email" class="form-control" required>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            Date
+                            <input type="date" name="date" class="form-control" required>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            Details (Include phone no:)
+                            <textarea name="message" rows="4" class="form-control"></textarea>
+                        </label>
+                    </div>
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                    <button type="submit" class="btn btn--primary btn--full-width contact__submit">Submit</button>
+                </form>
+                <div id="form-message" class="form-message"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
